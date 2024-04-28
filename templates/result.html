@@ -83,8 +83,14 @@
 </header>
 <div class="container">
     <div class="image-container">
-        <img src="{{ input_image }}" alt="Input Image" class="image">
-        <img src="{{ predicted_image }}" alt="Predicted Image" class="image">
+        <div>
+            <p style="font-weight: bold;">Input Image</p>
+            <img src="{{ input_image }}" alt="Input Image" class="image">
+        </div>
+        <div>
+            <p style="font-weight: bold;">Predicted Image</p>
+            <img src="{{ predicted_image }}" alt="Predicted Image" class="image">
+        </div>
     </div>
 
     <div class="btn-container">
@@ -92,9 +98,10 @@
         <a href="{{ predicted_image }}" download="predicted_image.jpg" class="btn-download">Download Predicted Image</a>
     </div>
 
+    <!-- to show results below the images-->
     <div class="result-info">
         <p>Predicted Tumor Type: {{ tumor_name }}</p>
-        <p>Prediction Accuracy: {{ accuracy }}</p>
+        <p>Prediction Accuracy: {{ '%.2f' | format(accuracy) }}</p>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
