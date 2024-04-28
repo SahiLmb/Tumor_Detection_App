@@ -23,6 +23,10 @@ classes = ['glioma', 'meningioma', 'no tumor', 'pituitary']
 UPLOAD_FOLDER = 'static'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
+# Create folders for input and predicted images if they don't exist
+os.makedirs(os.path.join(app.config['UPLOAD_FOLDER'], 'input_images'), exist_ok=True)
+os.makedirs(os.path.join(app.config['UPLOAD_FOLDER'], 'predicted_images'), exist_ok=True)
+
 def preprocess_image(image):
     """Preprocess the input image for the VGG16 model"""
     img = image.resize((224, 224))
@@ -38,7 +42,7 @@ def home():
         
         # Save the uploaded image
         filename = secrets.token_hex(8) + '.png'
-        filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+        filepath = os.path.join(app.config['UPLOAD_FOLDER'], 'input_images', filename)
         file.save(filepath)
 
         # Load and preprocess the image
@@ -52,17 +56,17 @@ def home():
         accuracy = prediction[0][predicted_class_idx]
      
         # Generate filenames for the input and predicted images
-        input_filename = f'input_{filename}'
+        # input_filename = f'input_{filename}'
         predicted_filename = f'predicted_{filename}'
-        input_filepath = os.path.join(app.config['UPLOAD_FOLDER'], input_filename)
-        predicted_filepath = os.path.join(app.config['UPLOAD_FOLDER'], predicted_filename)
+        # input_filepath = os.path.join(app.config['UPLOAD_FOLDER'], 'input_images', input_filename)
+        predicted_filepath = os.path.join(app.config['UPLOAD_FOLDER'], 'predicted_images', predicted_filename)
 
         # Save the input and predicted images
-        img.save(input_filepath)
+        # img.save(input_filepath)
         img.save(predicted_filepath)
         
         # Return the result template with the combined PDF path
-        return render_template('result.html', input_image=input_filepath, predicted_image=predicted_filepath, tumor_name=predicted_class, accuracy=accuracy)
+        return render_template('result.html', input_image=filepath, predicted_image=predicted_filepath, tumor_name=predicted_class, accuracy=accuracy)
     
     return render_template('index.html')
 
