@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, send_file
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 import numpy as np
 import tensorflow as tf
 import cv2
@@ -34,6 +34,17 @@ def preprocess_image(image):
     img = img / 255.0  # Normalize pixel values
     return img
 
+def overlay_text_on_image(image_path, tumor_name, accuracy):
+    """Overlay text on the image and return the path to the modified image"""
+    image = Image.open(image_path)
+    draw = ImageDraw.Draw(image)
+    font = ImageFont.truetype("arial.ttf", 20)
+    text = f"Tumor Type: {tumor_name}\nAccuracy: {accuracy:.2f}"
+    draw.text((10, 10), text, fill=(255, 255, 255), font=font)
+    modified_image_path = image_path.replace(".png", "_result.png")
+    image.save(modified_image_path)
+    return modified_image_path
+
 @app.route('/', methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
@@ -65,8 +76,11 @@ def home():
         # img.save(input_filepath)
         img.save(predicted_filepath)
         
+        # Overlay text on the predicted image
+        annotated_image_path = overlay_text_on_image(filepath, predicted_class, accuracy)
+     
         # Return the result template with the combined PDF path
-        return render_template('result.html', input_image=filepath, predicted_image=predicted_filepath, tumor_name=predicted_class, accuracy=accuracy)
+        return render_template('result.html', input_image=filepath, predicted_image=annotated_image_path, tumor_name=predicted_class, accuracy=accuracy)
     
     return render_template('index.html')
 
