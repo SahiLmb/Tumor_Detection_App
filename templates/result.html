@@ -102,6 +102,10 @@
     <div class="result-info">
         <p>Predicted Tumor Type: {{ tumor_name }}</p>
         <p>Prediction Accuracy: {{ '%.2f' | format(accuracy) }}</p>
+        <p>Precautions: {{ precautions }}</p>
+        <p>Symptoms: {{ symptoms }}</p>
+        <p>Research journals: <a href="{{ precautions_url }}" target="_blank">Click here</a></p>
+        <p>Some more info: <a href="{{ symptoms_url }}" target="_blank">Click here</a></p>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
