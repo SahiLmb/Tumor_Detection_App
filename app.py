@@ -7,8 +7,8 @@ from tensorflow.keras.models import load_model
 import secrets
 import os
 import shutil
-from fpdf import FPDF
-from pdf2image import convert_from_path
+
+from tumor_info import precautions_dict, symptoms_dict, tumor_urls
 
 
 app = Flask(__name__)
@@ -78,9 +78,16 @@ def home():
         
         # Overlay text on the predicted image
         annotated_image_path = overlay_text_on_image(filepath, predicted_class, accuracy)
+        
+        # Get precautions, symptoms, and other details based on the detected tumor type
+        precautions = precautions_dict.get(predicted_class, 'Precautions not available.')
+        precautions_url = tumor_urls.get(predicted_class, {}).get('precautions_url', '#')
+        symptoms = symptoms_dict.get(predicted_class, 'Symptoms not available.')
+        symptoms_url = tumor_urls.get(predicted_class, {}).get('symptoms_url', '#')
+        # other_details = tumor_urls.get(predicted_class, 'Details not available.')
      
         # Return the result template with the combined PDF path
-        return render_template('result.html', input_image=filepath, predicted_image=annotated_image_path, tumor_name=predicted_class, accuracy=accuracy)
+        return render_template('result.html', input_image=filepath, predicted_image=annotated_image_path, tumor_name=predicted_class, accuracy=accuracy,precautions=precautions, symptoms=symptoms, precautions_url=precautions_url, symptoms_url=symptoms_url)
     
     return render_template('index.html')
 
