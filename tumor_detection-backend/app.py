@@ -8,10 +8,11 @@ import secrets
 import os
 import shutil
 
+
 from tumor_info import precautions_dict, symptoms_dict, tumor_urls
 
-
 app = Flask(__name__)
+
 
 # Load the VGG16 model
 model = load_model('saved_model\Brain_Tumor_Vgg.h5')
