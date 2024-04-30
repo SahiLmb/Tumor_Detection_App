@@ -1,0 +1,7 @@
+Flask
+numpy
+opencv_python
+Pillow
+protobuf
+tensorflow
+tensorflow_intel

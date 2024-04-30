@@ -1,7 +1,8 @@
 # Environments
-my_env
 venv
 
 test.py
 saved_model
 static
+
+__pycache__
