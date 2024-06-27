@@ -14,11 +14,11 @@
 Welcome to the Brain Tumor Detection Application! This project leverages the power of machine learning to assist in the early detection of brain tumors using MRI images. Built with Python and Flask, this application provides an intuitive web interface for users to upload MRI scans and receive immediate feedback on the presence of tumors.
 
 ## Features
-- **MRI Image Upload**: Easily upload MRI images for analysis.
-- **Tumor Detection**: Utilizes a trained machine learning model,VGG16 to detect brain tumors with high accuracy of 97%.
-- **Result Visualization**: Visualize the detection results directly on the MRI images with type of tumour(Glioma,Meningioma,Pituary or if no tumour is present then the model prints no_tumour).
-- **User-Friendly Interface**: Simple and intuitive web interface powered by Flask.
-- **Scalable**: Easily deployable on any server or cloud platform.
+⭐ **MRI Image Upload**: Easily upload MRI images for analysis.
+⭐ **Tumor Detection**: Utilizes a trained machine learning model,VGG16 to detect brain tumors with high accuracy of 97%.
+⭐ **Result Visualization**: Visualize the detection results directly on the MRI images with type of tumour(Glioma,Meningioma,Pituary or if no tumour is present then the model prints no_tumour).
+⭐ **User-Friendly Interface**: Simple and intuitive web interface powered by Flask.
+⭐ **Scalable**: Easily deployable on any server or cloud platform.
 
 ## Demo
 
