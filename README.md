@@ -15,13 +15,12 @@ Welcome to the Brain Tumor Detection Application! This project leverages the pow
 
 ## Features
 - **MRI Image Upload**: Easily upload MRI images for analysis.
-<br/>
-- **Tumor Detection**: Utilizes a trained machine learning model,VGG16 to detect brain tumors with high accuracy of 97%. <br/>
-- **Classification**: Further classification of brain tumor into three type: Glioma Meningioma and Pituitary tumor.<br/>
-- **Result Visualization**: Visualize the detection results directly on the MRI images with type of tumour(Glioma,Meningioma,Pituary or if no tumor is present then the model prints no_tumor). <br/>
-- **User-Friendly Interface**: Simple and intuitive web interface powered by Flask.<br/>
+- **Tumor Detection**: Utilizes a trained machine learning model,VGG16 to detect brain tumors with high accuracy of 97%.
+- **Classification**: Further classification of brain tumor into three type: Glioma Meningioma and Pituitary tumor.
+- **Result Visualization**: Visualize the detection results directly on the MRI images with type of tumour(Glioma,Meningioma,Pituary or if no tumor is present then the model prints no_tumor). 
+- **User-Friendly Interface**: Simple and intuitive web interface powered by Flask.
 - **Download Report**: Users can download the photocopy of tumor detected image right after prediction is completed.
-- **Scalable**: Easily deployable on any server or cloud platform.<br/>
+- **Scalable**: Easily deployable on any server or cloud platform.
 
 ## Demo
 
