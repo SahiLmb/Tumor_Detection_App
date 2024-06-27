@@ -23,8 +23,11 @@ Welcome to the Brain Tumor Detection Application! This project leverages the pow
 
 ## Demo
 <br/>
-**Model detecting GLIOMA:
+##Model detecting GLIOMA:
 
+<p align="center">
+    <img src="Images/glioma (2).png"alt="glioma"width="80%"/>
+</p>
 <br/>
 
 ## Installation
