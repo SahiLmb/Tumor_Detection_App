@@ -29,13 +29,13 @@ To get started with the Brain Tumor Detection Application, follow these steps:
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/brain-tumor-detection.git
-    cd brain-tumor-detection
+    git clone https://github.com/SahiLmb/Tumor_Detection_App.git
+    cd Tumor_Detection_App
     ```
 
 2. **Create and activate a virtual environment**:
     ```bash
-    python3 -m venv venv
+    python -m venv venv
     source venv/bin/activate  # On Windows use `venv\Scripts\activate`
     ```
 
