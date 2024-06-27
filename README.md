@@ -1,6 +1,6 @@
 # Brain Tumor Detection Application
 
-## Table of Contents
+## 📋  Table of Contents
 
 - [Introduction](#introduction)
 - [Features](#features)
@@ -14,19 +14,33 @@
 Welcome to the Brain Tumor Detection Application! This project leverages the power of machine learning to assist in the early detection of brain tumors using MRI images. Built with Python and Flask, this application provides an intuitive web interface for users to upload MRI scans and receive immediate feedback on the presence of tumors.
 
 ## Features
-👉  **MRI Image Upload**: Easily upload MRI images for analysis.
+- **MRI Image Upload**: Easily upload MRI images for analysis.
 <br/>
-👉  **Tumor Detection**: Utilizes a trained machine learning model,VGG16 to detect brain tumors with high accuracy of 97%. <br/>
-👉  **Result Visualization**: Visualize the detection results directly on the MRI images with type of tumour(Glioma,Meningioma,Pituary or if no tumour is present then the model prints no_tumour). <br/>
-👉  **User-Friendly Interface**: Simple and intuitive web interface powered by Flask.<br/>
-👉  **Scalable**: Easily deployable on any server or cloud platform.<br/>
+- **Tumor Detection**: Utilizes a trained machine learning model,VGG16 to detect brain tumors with high accuracy of 97%. <br/>
+- **Classification**: Further classification of brain tumor into three type: Glioma Meningioma and Pituitary tumor.<br/>
+- **Result Visualization**: Visualize the detection results directly on the MRI images with type of tumour(Glioma,Meningioma,Pituary or if no tumor is present then the model prints no_tumor). <br/>
+- **User-Friendly Interface**: Simple and intuitive web interface powered by Flask.<br/>
+- **Download Report**: Users can download the photocopy of tumor detected image right after prediction is completed.
+- **Scalable**: Easily deployable on any server or cloud platform.<br/>
 
 ## Demo
-<br/>
-## Model detecting GLIOMA:
+
+### Model detecting Glioma:
 
 <p align="center">
     <img src="Images/glioma (2).png"alt="glioma"width="80%"/>
+</p>
+<br/>
+
+### Model predicting Meningioma:
+<p align="center">
+    <img src="Images/meningioma (2).png"alt="meningioma"width="80%"/>
+</p>
+<br/>
+
+### Model predicting Pituitary:
+<p align="center">
+    <img src="Images/pituitary (2).png"alt="pituitary"width="80%"/>
 </p>
 <br/>
 
@@ -56,7 +70,7 @@ To get started with the Brain Tumor Detection Application, follow these steps:
 
 5. **Run the application**:
     ```bash
-    flask run
+    flask run app.py
     ```
 ## Usage
 
