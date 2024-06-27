@@ -22,8 +22,10 @@ Welcome to the Brain Tumor Detection Application! This project leverages the pow
 👉  **Scalable**: Easily deployable on any server or cloud platform.<br/>
 
 ## Demo
+<br/>
+**Model detecting GLIOMA:
 
-
+<br/>
 
 ## Installation
 To get started with the Brain Tumor Detection Application, follow these steps:
