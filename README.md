@@ -1,7 +1,5 @@
 # Brain Tumor Detection Application
 
-Welcome to the Brain Tumor Detection project! Below you'll find detailed information on how to set up, use, and contribute to this project.
-
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -13,67 +11,54 @@ Welcome to the Brain Tumor Detection project! Below you'll find detailed informa
 - [License](#license)
 
 ## Introduction
-
-
+Welcome to the Brain Tumor Detection Application! This project leverages the power of machine learning to assist in the early detection of brain tumors using MRI images. Built with Python and Flask, this application provides an intuitive web interface for users to upload MRI scans and receive immediate feedback on the presence of tumors.
 
 ## Features
-
-
+- **MRI Image Upload**: Easily upload MRI images for analysis.
+- **Tumor Detection**: Utilizes a trained machine learning model,VGG16 to detect brain tumors with high accuracy of 97%.
+- **Result Visualization**: Visualize the detection results directly on the MRI images with type of tumour(Glioma,Meningioma,Pituary or if no tumour is present then the model prints no_tumour).
+- **User-Friendly Interface**: Simple and intuitive web interface powered by Flask.
+- **Scalable**: Easily deployable on any server or cloud platform.
 
 ## Demo
 
 
 
 ## Installation
+To get started with the Brain Tumor Detection Application, follow these steps:
 
-To run this project locally, follow these steps:
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/yourusername/brain-tumor-detection.git
+    cd brain-tumor-detection
+    ```
 
-1. Clone the repository:
+2. **Create and activate a virtual environment**:
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
 
-```bash
-git clone https://github.com
-```
+3. **Install dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-2. Navigate to the project directory:
+4. **Set up environment variables**:
+    - Create a `.env` file in the root directory.
+    - Add your environment variables following the format in `.env.example`.
 
-```bash
-cd 
-```
-
-3. There are 2 directories Frontend and backend
-for frontend
-```bash
-cd frontend
-```
-
-for backend
-```bash
-cd backend
-```
-
-3. Install dependencies:
-
-```bash
-npm install
-```
-
-4. Set up environment variables:
-   - Create a `.env` file in the root directory.
-   - Add environment variables for MongoDB connection, API keys, and other sensitive information.
-
-5. Start the development server:
-
-```bash
-npm run dev
-```
-
-6. Open your browser and visit `http://localhost:5000` to access the application.
-
+5. **Run the application**:
+    ```bash
+    flask run
+    ```
 ## Usage
 
-Once the application is running, users can:
-
-
+Once the application is running, users need to:
+1. Open your web browser and go to `http://127.0.0.1:5000/`.
+2. Upload an MRI image using the provided interface.
+3. Click "Submit" to analyze the image.
+4. View the results to see if a brain tumor along with it's type has been detected.
 
 ## Contributing
 
