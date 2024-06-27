@@ -69,7 +69,7 @@ To get started with the Brain Tumor Detection Application, follow these steps:
 
 5. **Run the application**:
     ```bash
-    flask run app.py
+    flask run
     ```
 ## Usage
 
